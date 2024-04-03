@@ -26,7 +26,7 @@ docker run -it -v $(pwd):/home/<username>/src avr-dev-env:latest`
 
 where `<username>` is the username you specified in the Dockerfile. All the files in the current working directory will be found in the `/home/<username>/src` directory.
 
-**Note:** I have it setup so that the created user has read/write/execute permissions for all files under the `/home/<username>` directory. This should work correctly. If not you may have to set permissions yourself and even broader you may find yourself needing to execute commands in the container as the root user. You can change the current user with the command `su <username>`. For example to change to the root user, use the command `su -` and I have conveniently set the password to `password`. I would then use the command `su <username>` to change back to the my specified user.
+**Note:** I have it setup so that the created user has read/write/execute permissions for all files under the `/home/<username>` directory. This should work correctly. If not you may have to set permissions yourself and even broader you may find yourself needing to execute commands in the container as the root user. You can change the current user with the command `su <username>`. For example to change to the root user, use the command `su -` and I have conveniently set the password to `password`. I would then use the command `su <username>` to change back to my specified user.
 
 ## Features
 
