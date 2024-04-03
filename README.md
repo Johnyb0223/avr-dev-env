@@ -16,9 +16,9 @@ docker build -t "avr-dev-env":"latest" .
 
  This will build the image and tag it as `avr-dev-env:latest`.
 
-During the build process a home directory is automatically created for the specified user. The home directory is `/home/username` and is empty by default.
+During the build process a home directory is automatically created for the specified user. The home directory is `/home/<username>` and is empty by default.
 
-The workflow I currently use is to then navigate to whatever directory I want to work in and mount it to the container. This is done by using the `-v` flag when starting the container. For example, to mount the current directory to the container, use the command
+The workflow I currently use is to then navigate to whatever directory I want to work in and mount it to the container. This is done using the `-v` flag when starting the container. For example, to mount the current directory to the container, use the command
 
 ```bash
 docker run -it -v $(pwd):/home/<username>/src avr-dev-env:latest`
