@@ -1,6 +1,6 @@
 # AVR Development Container
 
-This Docker container provides a simple Linux environment for developing with [AVR microcontrollers](https://en.wikipedia.org/wiki/AVR_microcontrollers).
+This Dockerfile provides a simple Linux environment for developing with [AVR microcontrollers](https://en.wikipedia.org/wiki/AVR_microcontrollers).
 
 ## Usage
 
