@@ -50,9 +50,7 @@ The `devcontainer.json` file should look like this.
 ```json
 {
     "name": "avr-dev-env",
-    "dockerFile": "${localWorkspaceFolder}/avr-dev-env/Dockerfile",
-    "settings": {},
-    "extensions": []
+    "dockerFile": "${localWorkspaceFolder}/avr-dev-env/Dockerfile"
 }
 ```
 
