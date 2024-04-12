@@ -4,7 +4,7 @@ This Dockerfile provides a simple Linux environment for developing with [AVR mic
 
 ## Usage (Visual Studio Code Dev Containers)
 
-Here I will describe how to use this container with Visual Studio Code's Dev Containers extension. This is a very convenient way to develop with this container.
+Here I will describe how to use this container with Visual Studio Code's Dev Containers extension. This is a very convenient way to develop with this container. You can find more information about Dev Containers [here](https://code.visualstudio.com/docs/devcontainers/containers).
 
 First ensure that you have Docker installed on your system. If you don't, you can install it by following the instructions [here](https://docs.docker.com/get-docker/). Also make sure the Docker daemon is running.
 
@@ -80,13 +80,18 @@ docker run -it -v $(pwd):/home/<username>/src avr-dev-env:latest`
 
 where `<username>` is the username you specified in the Dockerfile. All the files in the current working directory will be found in the `/home/<username>/src` directory.
 
-**Note:** I have it setup so that the created user has read/write/execute permissions for all files under the `/home/<username>` directory. This should work correctly. If not you may have to set permissions yourself and even broader you may find yourself needing to execute commands in the container as the root user. You can change the current user with the command `su <username>`. For example to change to the root user, use the command `su -` and I have conveniently set the password to `password`. I would then use the command `su <username>` to change back to my specified user.
+**Note:** I have it setup so that the created user has read/write/execute permissions for all files under the `/home/<username>` directory. This should work correctly. If not you may have to set permissions yourself and even broader you may find yourself needing to execute commands in the container as the root user. You can change the current user with the command `su <username>`. For example to change to the root user, use the command `su -` and I have conveniently set the password to `password` (change this). I would then use the command `su <username>` to change back to my specified user.
 
 ## Features
 
 - **AVR Toolchain**: Includes avr-gcc, avrdude, avr-gdb, avr-libc, simavr, make, and git.
 - **Man Pages**: Comes with man pages enabled for Linux utilities and AVR toolchain.
+- **Clang-Format**: Includes a local installation of clang-format for formatting code. Add the following line to your vscode settings.json to have your files formatted on save.
 
+    ```json
+    "editor.formatOnSave": true
+    ```
+    
 ## Useful Resources
 
 - [avr-libc documentation](https://www.nongnu.org/avr-libc/user-manual/index.html): very useful user manuals and FAQs for AVR microcontrollers.
