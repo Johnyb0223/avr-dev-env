@@ -14,7 +14,8 @@ RUN apt-get update && \
     gdb-avr \
     simavr  \
     make    \
-    man-db
+    man-db  \
+    clang-format
 
 # Add AVR-GCC binaries to PATH
 ENV PATH="/opt/avr-gcc-${AVR_GCC_VERSION}/bin:${PATH}"
