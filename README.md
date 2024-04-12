@@ -91,7 +91,8 @@ where `<username>` is the username you specified in the Dockerfile. All the file
     ```json
     "editor.formatOnSave": true
     ```
-    
+    If this doesn't work you need to ensure you have the clang-format vscode extension installed locally in the container.
+
 ## Useful Resources
 
 - [avr-libc documentation](https://www.nongnu.org/avr-libc/user-manual/index.html): very useful user manuals and FAQs for AVR microcontrollers.
