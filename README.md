@@ -12,9 +12,16 @@ To utilize this container with Visual Studio Code's Dev Containers extension, fo
 
 The Dev Containers extension expects there to be a `.devcontainer` directory in the root of your project. Thats what this repository is for. You can add it to your project as a submodule by running the following command in your project directory:
 
-```bash 
-git submodule add https://github.com/Johnyb0223/avr-dev-env.git .devcontainer
 ```
+>> git submodule add -f https://github.com/Johnyb0223/avr-dev-env.git .devcontainer
+
+ /**
+ *`-f` is used to force the submodule to be added. This is useful if you 
+ * already have a `.devcontainer` directory in your project. If you have 
+ * .devcontainer in you .gitignore file `-f` is also necessary.
+ */
+```
+
 
 see we have named it `.devcontainer`. Now all you have to do is initiate the Dev Container extension and it will open the project in the container. To do this click on the blue icon in the bottom left corner and select "Reopen in Container".
 
